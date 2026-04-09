@@ -985,7 +985,6 @@ def fetch_pr_keyword(keyword: str, per_kw: int = 5) -> List[Dict]:
         if is_korean_article(a["link"], a["title"], a["source"])
         and a["date"] and a["date"] >= since_24h
         and not _CAT_SKIP_RE.search(a["title"])
-        and a["art_type"] == "보도자료"
     ]
 
     # 중복 제거
